@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="601.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.GuiController">
+   <children>
+      <TextField fx:id="firstNameTeacher" layoutX="47.0" layoutY="56.0" promptText="First Name" />
+      <TextField fx:id="lastNameTeacher" layoutX="47.0" layoutY="132.0" promptText="Last Name" />
+      <TextField fx:id="teacherIdTeacher" layoutX="47.0" layoutY="233.0" promptText="Teacher ID" />
+      <Button layoutX="310.0" layoutY="59.0" mnemonicParsing="false" onAction="#saveTeacher" prefHeight="57.0" prefWidth="146.0" text="Save Teacher" />
+      <Button layoutX="310.0" layoutY="148.0" mnemonicParsing="false" onAction="#showStudents" prefHeight="57.0" prefWidth="146.0" text="Show Students" />
+      <ListView fx:id="studentListTeacher" layoutX="312.0" layoutY="294.0" prefHeight="255.0" prefWidth="288.0" />
+      <Label layoutX="312.0" layoutY="270.0" prefHeight="31.0" prefWidth="288.0" text="List of Students" />
+      <TextField fx:id="courseIdTeacher" layoutX="47.0" layoutY="294.0" promptText="Course ID" />
+      <Button layoutX="520.0" layoutY="59.0" mnemonicParsing="false" onAction="#refresh" prefHeight="57.0" prefWidth="146.0" text="Refresh" />
+      <Button layoutX="520.0" layoutY="148.0" mnemonicParsing="false" onAction="#clearTeacher" prefHeight="57.0" prefWidth="146.0" text="Clear" />
+   </children>
+</AnchorPane>
