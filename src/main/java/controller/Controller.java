@@ -205,7 +205,9 @@ public record Controller(CourseJDBCRepository courseJDBCRepository, StudentJDBCR
         return students;
     }
 
-
+    /**
+     * return a list of students who attend a specific course
+     */
     public ArrayList<Student> findStudentsByCourseId(int courseId) throws IOException {
         ArrayList<Integer> studentsIds = this.enrolledJDBCRepository.findStudentsByCourseId(courseId);
         ArrayList<Student> students = (ArrayList<Student>) this.studentJDBCRepository.findAll();
