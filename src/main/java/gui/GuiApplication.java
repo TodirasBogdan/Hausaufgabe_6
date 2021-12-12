@@ -12,6 +12,9 @@ public class GuiApplication extends Application {
 
     private static Stage primaryStage;
 
+    /**
+     * show the start menu
+     */
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;
@@ -22,11 +25,17 @@ public class GuiApplication extends Application {
         stage.show();
     }
 
+    /**
+     * start the app
+     */
     public static void main(String[] args) {
         launch();
     }
 
 
+    /**
+     * show a menu
+     */
     public static void showMenu(String file, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GuiApplication.class.getResource(file));
         Scene scene = new Scene(fxmlLoader.load(), 800, 700);

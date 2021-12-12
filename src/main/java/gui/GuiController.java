@@ -50,16 +50,25 @@ public class GuiController {
     private TextField courseIdTeacher;
 
 
+    /**
+     * open student menu
+     */
     @FXML
     protected void onStudentMenuButtonClick() throws IOException {
         GuiApplication.showMenu("studentMenu-view.fxml", "Student Menu");
     }
 
+    /**
+     * open teacher menu
+     */
     @FXML
     protected void onTeacherMenuButtonClick() throws IOException {
         GuiApplication.showMenu("teacherMenu-view.fxml", "Teacher Menu");
     }
 
+    /**
+     * save a student
+     */
     @FXML
     protected void saveStudent() throws IOException {
         String firstName = firstNameStudent.getText();
@@ -69,6 +78,9 @@ public class GuiController {
         controller.addStudent(firstName, lastName, studentId, totalCredits);
     }
 
+    /**
+     * register a student
+     */
     @FXML
     protected void registerStudent() throws IOException {
         int studentId = Integer.parseInt(studentIdStudent.getText());
@@ -76,6 +88,9 @@ public class GuiController {
         controller.registerById(studentId, courseId);
     }
 
+    /**
+     * show a student's total credits
+     */
     @FXML
     protected void showTotalCreditsStudent() throws IOException {
         int studentId = Integer.parseInt(studentIdStudent.getText());
@@ -93,6 +108,9 @@ public class GuiController {
     }
 
 
+    /**
+     * save a teacher
+     */
     @FXML
     protected void saveTeacher() throws IOException {
         String firstName = firstNameTeacher.getText();
@@ -101,6 +119,9 @@ public class GuiController {
         controller.addTeacher(firstName, lastName, teacherId);
     }
 
+    /**
+     * show a teacher's students
+     */
     @FXML
     protected void showStudents() throws IOException {
         if (teacherIdTeacher.getText() != null) {
@@ -112,6 +133,9 @@ public class GuiController {
         }
     }
 
+    /**
+     * show a course's students
+     */
     @FXML
     protected void refresh() throws IOException {
         if (courseIdTeacher.getText() != null) {
@@ -123,6 +147,9 @@ public class GuiController {
         }
     }
 
+    /**
+     * clear student menu fields
+     */
     @FXML
     protected void clearStudent(){
         firstNameStudent.clear();
@@ -132,6 +159,9 @@ public class GuiController {
         courseIdStudent.clear();
     }
 
+    /**
+     * clear teacher menu fields
+     */
     @FXML
     protected void clearTeacher(){
         firstNameTeacher.clear();
